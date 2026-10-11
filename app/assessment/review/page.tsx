@@ -450,7 +450,7 @@ export default function AssessmentReviewPage() {
                           </div>
                           <p className={isCorrect ? "text-green" : "text-pink"}>
                             Jawabanmu: {question.options[answer.choice]}
-                            {isCorrect ? " — benar" : " — belum tepat"}
+                            {isCorrect ? ", benar" : ", belum tepat"}
                           </p>
                           <p className="text-green">
                             Jawaban benar: {question.options[question.correct]}

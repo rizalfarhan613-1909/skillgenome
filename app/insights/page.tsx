@@ -101,7 +101,7 @@ export default function InsightsPage() {
         <header className="mb-6">
           <p className="mb-2 flex items-center gap-2 font-mono text-sm text-cyan">
             <Newspaper aria-hidden="true" size={16} strokeWidth={1.5} />
-            TIER 3 — PENDUKUNG
+            TIER 3 - PENDUKUNG
           </p>
           <h1 className="font-heading text-3xl font-semibold text-text sm:text-4xl">
             Insights
@@ -116,7 +116,7 @@ export default function InsightsPage() {
           role="note"
           className="glass mb-6 rounded-lg px-4 py-3 text-center text-sm font-medium text-primary-soft"
         >
-          Dibuat AI — contoh data
+          Dibuat AI, contoh data
         </p>
 
         <div className="space-y-6">

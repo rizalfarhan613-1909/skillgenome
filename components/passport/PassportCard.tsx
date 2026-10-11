@@ -23,6 +23,8 @@ export interface PassportCardProps {
   mastery: Mastery;
   passportId: string;
   issuedAt: string;
+  /** Bila true, QR disembunyikan karena passport belum dibuat. */
+  isDraft?: boolean;
 }
 
 /** Label level dari nilai mastery 0–1. Dipakai ulang di halaman verifikasi. */
@@ -64,6 +66,7 @@ export function PassportCard({
   mastery,
   passportId,
   issuedAt,
+  isDraft = false,
 }: PassportCardProps) {
   const reduceMotion = useReducedMotion();
 
@@ -86,7 +89,7 @@ export function PassportCard({
     <article className="relative rounded-lg p-px">
       <motion.div
         aria-hidden="true"
-        className="absolute inset-0 rounded-lg"
+        className="absolute inset-0 rounded-lg opacity-30"
         style={{
           backgroundImage: hologramGradient,
           backgroundSize: "200% 100%",
@@ -101,7 +104,7 @@ export function PassportCard({
         }
       />
 
-      <div className="glass relative flex flex-col gap-5 rounded-lg bg-bg/90 p-5 sm:p-6">
+      <div className="glass relative flex flex-col gap-5 rounded-lg bg-bg/90 p-5 backdrop-blur-md sm:p-6">
         <header className="flex items-start gap-4">
           <span
             aria-hidden="true"
@@ -172,22 +175,30 @@ export function PassportCard({
             </ul>
 
             <div className="mt-4 flex items-center gap-3">
-              <span className="shrink-0 rounded-md bg-white p-1.5">
-                <QRCodeSVG
-                  value={verifyUrl}
-                  size={64}
-                  level="M"
-                  bgColor="#FFFFFF"
-                  fgColor="#0A0A1A"
-                  title={`QR verifikasi passport ${passportId}`}
-                />
-              </span>
-              <a
-                href={verifyUrl}
-                className="min-h-11 break-all text-xs text-cyan underline underline-offset-4 hover:text-primary-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-soft"
-              >
-                Verifikasi: {verifyUrl}
-              </a>
+              {isDraft ? (
+                <p className="text-xs leading-5 text-muted">
+                  QR muncul setelah Passport dibuat
+                </p>
+              ) : (
+                <>
+                  <span className="shrink-0 rounded-md bg-white p-2.5">
+                    <QRCodeSVG
+                      value={verifyUrl}
+                      size={64}
+                      level="M"
+                      bgColor="#FFFFFF"
+                      fgColor="#0A0A1A"
+                      title={`QR verifikasi passport ${passportId}`}
+                    />
+                  </span>
+                  <a
+                    href={verifyUrl}
+                    className="min-h-11 break-all text-xs text-cyan underline underline-offset-4 hover:text-primary-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-soft"
+                  >
+                    Verifikasi: {verifyUrl}
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>

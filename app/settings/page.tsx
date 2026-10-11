@@ -4,11 +4,13 @@ import {
   Check,
   ChevronDown,
   Download,
+  FlaskConical,
   Info,
   Scale,
   Trash2,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import BottomTab from "@/components/layout/BottomTab";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
@@ -446,6 +448,26 @@ export default function SettingsPage() {
                 Hapus data saya
               </button>
             </div>
+          </section>
+
+          <section
+            aria-label="Developer Tools"
+            className="glass rounded-lg p-5 sm:p-6"
+          >
+            <h2 className="flex items-center gap-2 font-heading text-lg font-semibold text-text">
+              <FlaskConical aria-hidden="true" size={18} strokeWidth={1.5} />
+              Developer Tools
+            </h2>
+            <p className="mt-1 text-sm leading-6 text-muted">
+              Antarmuka uji coba engine Langflow langsung. Bukan alur utama
+              pengguna.
+            </p>
+            <Link
+              href="/agent"
+              className="mt-4 inline-flex min-h-11 items-center justify-center rounded-md border border-glass-border px-4 text-sm font-medium text-text transition-colors hover:bg-glass"
+            >
+              Buka Agent Mode
+            </Link>
           </section>
         </div>
 

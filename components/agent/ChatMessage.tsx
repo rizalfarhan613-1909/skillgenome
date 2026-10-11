@@ -1,8 +1,16 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { ResultCard, type ChainPrefill } from "@/components/agent/ResultCard";
+import type { AgentToolName } from "@/components/agent/ToolPicker";
 
 export interface ChatMessageProps {
   role: "user" | "assistant";
   content: string;
+  /** Tool yang menghasilkan pesan ini, bila berupa hasil /api/agent. */
+  tool?: AgentToolName;
+  /** Hasil mentah untuk dirender sebagai ResultCard. */
+  result?: unknown;
+  /** Dipanggil saat user klik tombol chain di ResultCard. */
+  onChainNext?: (tool: AgentToolName, prefill: ChainPrefill) => void;
 }
 
 /** Mengubah teks menjadi objek bila isinya JSON, selain itu mengembalikan null. */
@@ -18,8 +26,14 @@ function tryParseJson(content: string): unknown {
   }
 }
 
-/** Bubble pesan chat: JSON ditampilkan pretty-print, teks lain tampil biasa. */
-export function ChatMessage({ role, content }: ChatMessageProps) {
+/** Bubble pesan chat: hasil tool dirender sebagai card, sisanya pretty-print/teks. */
+export function ChatMessage({
+  role,
+  content,
+  tool,
+  result,
+  onChainNext,
+}: ChatMessageProps) {
   const reduceMotion = useReducedMotion();
   const isUser = role === "user";
   const parsed = tryParseJson(content);
@@ -39,7 +53,9 @@ export function ChatMessage({ role, content }: ChatMessageProps) {
         {isUser ? "Kamu" : "Agent"}
       </span>
 
-      {parsed !== null ? (
+      {!isUser && tool !== undefined && result !== undefined && onChainNext ? (
+        <ResultCard tool={tool} result={result} onChainNext={onChainNext} />
+      ) : parsed !== null ? (
         <pre className="overflow-auto rounded-md bg-bg/60 p-2 font-mono text-xs leading-5">
           <code>{JSON.stringify(parsed, null, 2)}</code>
         </pre>

@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import BottomTab from "@/components/layout/BottomTab";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import { BobGuideDialog } from "@/components/agent/BobGuideDialog";
 import { RadarGenome } from "@/components/genome/RadarGenome";
 import { SkillList } from "@/components/genome/SkillList";
 import { Metric } from "@/components/ui/Metric";
@@ -26,7 +27,7 @@ const GalaxyView = dynamic(
         className="h-full min-h-72 w-full animate-pulse rounded-lg bg-primary/10"
         role="status"
       >
-        Memuat galaksi 3D…
+        Memuat galaksi 3D.
       </div>
     ),
   },
@@ -90,7 +91,7 @@ export default function GenomePage() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("radar");
   const [focusedSkill, setFocusedSkill] = useState<SkillName | null>(null);
-  const [showBobGuide, setShowBobGuide] = useState(false);
+  const [bobOpen, setBobOpen] = useState(false);
   const canShowGalaxy = useSyncExternalStore(
     (callback) => subscribeToMediaQuery(galaxyQuery, callback),
     () => getMediaQuerySnapshot(galaxyQuery),
@@ -365,25 +366,14 @@ export default function GenomePage() {
             </Link>
             <button
               type="button"
-              aria-expanded={showBobGuide}
-              aria-controls="genome-bob-guide"
-              onClick={() => setShowBobGuide((current) => !current)}
+              onClick={() => setBobOpen(true)}
               className="inline-flex min-h-11 flex-1 items-center justify-center rounded-md border border-glass-border px-4 font-medium text-text transition-colors hover:bg-glass"
             >
-              Lanjutkan di Bob
+              Cara pakai di Bob
             </button>
           </div>
-          {showBobGuide && (
-            <p
-              id="genome-bob-guide"
-              className="mt-3 rounded-md border border-glass-border p-3 text-sm leading-6 text-muted"
-            >
-              Integrasi lanjutan dengan IBM Bob belum aktif. Saat tersedia,
-              Bob dapat membantu menjelaskan hasil dan memulai langkah belajar
-              berikutnya.
-            </p>
-          )}
         </section>
+        <BobGuideDialog open={bobOpen} onOpenChange={setBobOpen} />
       </main>
       <Footer />
       <BottomTab />

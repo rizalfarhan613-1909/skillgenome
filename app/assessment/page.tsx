@@ -258,7 +258,7 @@ export default function AssessmentPage() {
             </div>
 
             <p className="mt-5 text-sm text-muted">
-              Pilih jawaban terbaik. Gunakan tombol 1–4 untuk memilih dan Enter
+              Pilih jawaban terbaik. Gunakan tombol 1-4 untuk memilih dan Enter
               untuk menjawab.
             </p>
             <button

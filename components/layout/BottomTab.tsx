@@ -1,6 +1,6 @@
 "use client";
 
-import { BriefcaseBusiness, Dna, IdCard, Map, Settings } from "lucide-react";
+import { BriefcaseBusiness, Dna, IdCard, Map, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,7 +9,7 @@ const tabs = [
   { href: "/roadmap", label: "Roadmap", Icon: Map },
   { href: "/jobs", label: "Jobs", Icon: BriefcaseBusiness },
   { href: "/passport", label: "Passport", Icon: IdCard },
-  { href: "/settings", label: "Settings", Icon: Settings },
+  { href: "/progress", label: "Progress", Icon: TrendingUp },
 ] as const;
 
 /** Menampilkan navigasi bawah yang responsif untuk viewport mobile. */

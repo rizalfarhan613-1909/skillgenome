@@ -79,7 +79,7 @@ export default function CommunityPage() {
       <Navbar />
       <main className="mx-auto w-full max-w-5xl px-4 pb-72 pt-7 sm:px-6 md:pb-12 md:pt-10 lg:pb-16">
         <header className="mb-6">
-          <p className="mb-2 font-mono text-sm text-cyan">TIER 3 — PENDUKUNG</p>
+          <p className="mb-2 font-mono text-sm text-cyan">TIER 3 - PENDUKUNG</p>
           <h1 className="font-heading text-3xl font-semibold text-text sm:text-4xl">
             Komunitas
           </h1>
@@ -93,7 +93,7 @@ export default function CommunityPage() {
           role="note"
           className="glass mb-6 rounded-lg px-4 py-3 text-center text-sm font-medium text-primary-soft"
         >
-          Contoh data — bukan data nyata
+          Contoh data, bukan data nyata
         </p>
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start">

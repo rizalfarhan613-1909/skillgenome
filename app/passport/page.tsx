@@ -285,6 +285,7 @@ export default function PassportPage() {
                   mastery={mastery}
                   passportId={passportId}
                   issuedAt={issuedAt}
+              isDraft={stage === "draft"}
                 />
               </motion.div>
             </AnimatePresence>

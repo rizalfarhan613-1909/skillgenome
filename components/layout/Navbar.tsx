@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const navigationLinks = [
   { href: "/genome", label: "Genome" },
@@ -8,8 +11,16 @@ const navigationLinks = [
   { href: "/progress", label: "Progress" },
 ] as const;
 
+const moreLinks = [
+  { href: "/community", label: "Community" },
+  { href: "/insights", label: "Insights" },
+  { href: "/agent", label: "Agent" },
+] as const;
+
 /** Menampilkan navigasi utama SkillGenome pada viewport desktop. */
 export default function Navbar() {
+  const [moreOpen, setMoreOpen] = useState(false);
+
   return (
     <header className="glass sticky top-0 z-40 hidden border-b border-glass-border lg:block">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
@@ -32,6 +43,45 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <li className="relative">
+              <button
+                type="button"
+                aria-expanded={moreOpen}
+                aria-haspopup="true"
+                onClick={() => setMoreOpen((open) => !open)}
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") {
+                    setMoreOpen(false);
+                  }
+                }}
+                className="inline-flex min-h-11 items-center text-sm text-muted transition-colors hover:text-text focus-visible:text-text"
+              >
+                Lainnya
+              </button>
+              {moreOpen && (
+                <ul
+                  aria-label="Menu lainnya"
+                  className="glass absolute right-0 top-full mt-1 min-w-44 rounded-lg border border-glass-border p-2"
+                >
+                  {moreLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setMoreOpen(false)}
+                        className="flex min-h-11 items-center rounded-md px-3 text-sm text-muted transition-colors hover:bg-glass hover:text-text focus-visible:text-text"
+                      >
+                        {link.label}
+                        {link.href === "/agent" && (
+                          <span className="ml-2 rounded-full border border-glass-border px-2 py-0.5 font-mono text-[10px] text-primary-soft">
+                            Dev
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
           </ul>
         </nav>
 
