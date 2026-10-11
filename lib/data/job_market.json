@@ -1,0 +1,117 @@
+[
+  {
+    "_id": "role_data_analyst",
+    "name": "data_analyst",
+    "required_skills": {
+      "SQL": 0.95,
+      "Python": 0.75,
+      "Statistics": 0.8,
+      "Excel": 0.7,
+      "DataViz": 0.8,
+      "BusinessAcumen": 0.65,
+      "Communication": 0.7,
+      "DomainKnowledge": 0.5
+    },
+    "salary_range": {
+      "min": null,
+      "max": null,
+      "currency": "USD",
+      "source": "kaggle_linkedin_job_postings_2023_2024 (agregat)"
+    },
+    "job_count": null,
+    "scope": "global_benchmark",
+    "source": "kaggle_linkedin_job_postings_2023_2024 (agregat); bobot skill heuristik awal"
+  },
+  {
+    "_id": "role_data_scientist",
+    "name": "data_scientist",
+    "required_skills": {
+      "SQL": 0.4,
+      "Python": 0.95,
+      "Statistics": 0.9,
+      "Excel": 0.3,
+      "DataViz": 0.65,
+      "BusinessAcumen": 0.35,
+      "Communication": 0.45,
+      "DomainKnowledge": 0.5
+    },
+    "salary_range": {
+      "min": null,
+      "max": null,
+      "currency": "USD",
+      "source": "kaggle_linkedin_job_postings_2023_2024 (agregat)"
+    },
+    "job_count": null,
+    "scope": "global_benchmark",
+    "source": "kaggle_linkedin_job_postings_2023_2024 (agregat); bobot skill heuristik"
+  },
+  {
+    "_id": "role_frontend_dev",
+    "name": "frontend_dev",
+    "required_skills": {
+      "SQL": 0.05,
+      "Python": 0.25,
+      "Statistics": 0.1,
+      "Excel": 0.1,
+      "DataViz": 0.4,
+      "BusinessAcumen": 0.15,
+      "Communication": 0.5,
+      "DomainKnowledge": 0.1
+    },
+    "salary_range": {
+      "min": null,
+      "max": null,
+      "currency": "USD",
+      "source": "kaggle_linkedin_job_postings_2023_2024 (agregat)"
+    },
+    "job_count": null,
+    "scope": "global_benchmark",
+    "source": "kaggle_linkedin_job_postings_2023_2024 (agregat); bobot skill heuristik"
+  },
+  {
+    "_id": "role_product_manager",
+    "name": "product_manager",
+    "required_skills": {
+      "SQL": 0.2,
+      "Python": 0.1,
+      "Statistics": 0.35,
+      "Excel": 0.25,
+      "DataViz": 0.4,
+      "BusinessAcumen": 0.95,
+      "Communication": 0.9,
+      "DomainKnowledge": 0.55
+    },
+    "salary_range": {
+      "min": null,
+      "max": null,
+      "currency": "USD",
+      "source": "kaggle_linkedin_job_postings_2023_2024 (agregat)"
+    },
+    "job_count": null,
+    "scope": "global_benchmark",
+    "source": "kaggle_linkedin_job_postings_2023_2024 (agregat); bobot skill heuristik"
+  },
+  {
+    "_id": "role_business_analyst",
+    "name": "business_analyst",
+    "required_skills": {
+      "SQL": 0.65,
+      "Python": 0.25,
+      "Statistics": 0.55,
+      "Excel": 0.8,
+      "DataViz": 0.3,
+      "BusinessAcumen": 0.9,
+      "Communication": 0.8,
+      "DomainKnowledge": 0.75
+    },
+    "salary_range": {
+      "min": null,
+      "max": null,
+      "currency": "USD",
+      "source": "kaggle_linkedin_job_postings_2023_2024 (agregat)"
+    },
+    "job_count": null,
+    "scope": "global_benchmark",
+    "source": "kaggle_linkedin_job_postings_2023_2024 (agregat); bobot skill heuristik"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "skill_sql",
+    "name": "SQL",
+    "description": "Mengambil, menggabungkan, dan merangkum data relasional dengan query. Mencakup filter, agregasi, join, dan window function.",
+    "emb8": [0.3, 0.7, 0.6, 0, 0.1, 0.5, 0, 0.9],
+    "importance_data_analyst": 0.95,
+    "resources": [
+      { "title": "SQLBolt — Pelajaran SQL interaktif", "url": "https://sqlbolt.com/", "hours": 4 },
+      { "title": "ThoughtSpot SQL Tutorial", "url": "https://www.thoughtspot.com/sql-tutorial", "hours": 8 }
+    ]
+  },
+  {
+    "_id": "skill_python",
+    "name": "Python",
+    "description": "Menggunakan Python untuk mengolah dan menganalisis data. Mencakup struktur data, fungsi, serta pustaka analisis seperti pandas.",
+    "emb8": [0.5, 0.95, 0.7, 0, 0.1, 0.6, 0.3, 0.7],
+    "importance_data_analyst": 0.75,
+    "resources": [
+      { "title": "Kaggle Learn — Python", "url": "https://www.kaggle.com/learn/python", "hours": 5 },
+      { "title": "Dokumentasi resmi — Python Tutorial", "url": "https://docs.python.org/3/tutorial/", "hours": 10 }
+    ]
+  },
+  {
+    "_id": "skill_statistics",
+    "name": "Statistics",
+    "description": "Menafsirkan variasi dan pola data dengan ukuran statistik serta penalaran probabilistik. Mencakup pengujian hipotesis, distribusi, dan korelasi.",
+    "emb8": [0.95, 0.2, 0.8, 0.1, 0.3, 0.2, 0.3, 0.3],
+    "importance_data_analyst": 0.8,
+    "resources": [
+      { "title": "Khan Academy — Statistics and Probability", "url": "https://www.khanacademy.org/math/statistics-probability", "hours": 12 },
+      { "title": "StatQuest — Video Index", "url": "https://statquest.org/video-index/", "hours": 8 }
+    ]
+  },
+  {
+    "_id": "skill_excel",
+    "name": "Excel",
+    "description": "Membersihkan, menganalisis, dan menyajikan data tabular menggunakan formula dan fitur ringkasan spreadsheet. Mencakup lookup, agregasi bersyarat, dan PivotTable.",
+    "emb8": [0.5, 0.2, 0.4, 0.1, 0.4, 0.9, 0.4, 0.5],
+    "importance_data_analyst": 0.7,
+    "resources": [
+      { "title": "ExcelJet — Panduan dan contoh formula", "url": "https://exceljet.net/", "hours": 6 },
+      { "title": "Microsoft Support — Bantuan Excel", "url": "https://support.microsoft.com/en-us/excel", "hours": 6 }
+    ]
+  },
+  {
+    "_id": "skill_dataviz",
+    "name": "DataViz",
+    "description": "Memilih dan merancang visualisasi agar pola, perbandingan, dan perubahan data mudah dipahami. Mencakup aksesibilitas grafik dan komunikasi temuan.",
+    "emb8": [0.3, 0.3, 0.3, 0.5, 0.3, 0.6, 0.95, 0.2],
+    "importance_data_analyst": 0.8,
+    "resources": [
+      { "title": "The Data Visualisation Catalogue", "url": "https://datavizcatalogue.com/", "hours": 4 },
+      { "title": "Storytelling with Data — Blog", "url": "https://www.storytellingwithdata.com/blog", "hours": 5 }
+    ]
+  },
+  {
+    "_id": "skill_businessacumen",
+    "name": "BusinessAcumen",
+    "description": "Menghubungkan analisis dengan tujuan, metrik, dan keputusan bisnis. Mencakup KPI, unit economics, OKR, dan analisis cohort.",
+    "emb8": [0.2, 0, 0.5, 0.5, 0.95, 0.2, 0.2, 0.1],
+    "importance_data_analyst": 0.65,
+    "resources": [
+      { "title": "Y Combinator Startup School", "url": "https://www.startupschool.org/", "hours": 8 },
+      { "title": "Atlassian — Panduan OKR", "url": "https://www.atlassian.com/agile/project-management/okrs", "hours": 3 }
+    ]
+  },
+  {
+    "_id": "skill_communication",
+    "name": "Communication",
+    "description": "Menyampaikan temuan secara jelas dan sesuai kebutuhan audiens. Mencakup storytelling data, presentasi insight, dan kolaborasi dengan pemangku kepentingan.",
+    "emb8": [0, 0, 0.3, 0.95, 0.5, 0.1, 0.4, 0],
+    "importance_data_analyst": 0.7,
+    "resources": [
+      { "title": "Google — Technical Writing Courses", "url": "https://developers.google.com/tech-writing", "hours": 5 },
+      { "title": "Storytelling with Data — Blog", "url": "https://www.storytellingwithdata.com/blog", "hours": 5 }
+    ]
+  },
+  {
+    "_id": "skill_domainknowledge",
+    "name": "DomainKnowledge",
+    "description": "Memahami konteks industri dan definisi metrik yang digunakan untuk menafsirkan data dengan tepat. Contoh domain mencakup e-commerce, SaaS, fintech, dan kesehatan.",
+    "emb8": [0.2, 0, 0.4, 0.3, 0.9, 0.1, 0.1, 0.2],
+    "importance_data_analyst": 0.5,
+    "resources": [
+      { "title": "Shopify — Metrik e-commerce", "url": "https://www.shopify.com/blog/basic-ecommerce-metrics", "hours": 4 },
+      { "title": "CDC — FastStats", "url": "https://www.cdc.gov/nchs/fastats/", "hours": 4 }
+    ]
+  }
+]
